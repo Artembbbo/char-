@@ -71,7 +71,7 @@ int main() {
 
 bool is_right(size_t start, size_t end, char*& str) {
 	for (size_t i = start; i < end - 1; i++) {
-		if (str[i] >= str[i + 1]) {
+		if (str[i] > str[i + 1]) {
 			return false;
 		}
 	}
@@ -82,4 +82,5 @@ bool is_punk_mark(char sym) {
 	if (sym >= 'A' && sym <= 'Z') { return false; }
 	if (sym >= '0' && sym <= '9') { return false; }
 	else return true;
+
 }
